@@ -1,10 +1,11 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {useState} from 'react';
+import {SafeAreaView, Button} from 'react-native';
 
-import ToDoList from './components/ToDoList';
-import ToDoForm from './components/ToDoForm';
+import ToDoList from '../components/ToDoList';
+import ToDoForm from '../components/ToDoForm';
 
-const HomeScreen = ({}) => {
+const HomeScreen = ({navigation}) => {
   const [tasks, setTasks] = useState(['Do laundry', 'Go to gym', 'Walk dog']);
 
   const handleAddTask = task => {
@@ -18,7 +19,7 @@ const HomeScreen = ({}) => {
       <SafeAreaView>
         <ToDoList tasks={tasks} />
         <ToDoForm addTask={handleAddTask} />
-        <button
+        <Button
           title="Go to about"
           onPress={() => navigation.navigate('About')}
         />

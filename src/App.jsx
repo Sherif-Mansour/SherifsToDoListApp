@@ -10,8 +10,8 @@ import {SafeAreaView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import ToDoList from './components/ToDoList';
-import ToDoForm from './components/ToDoForm';
+import HomeScreen from './screens/HomeScreen';
+import AboutScreen from './screens/AboutScreen';
 
 function App() {
   const Stack = createStackNavigator();
